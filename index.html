@@ -115,7 +115,7 @@
                         <div class="col-lg-6">
                             <div class="content-block">
                                 <div class="btn-block">
-                                    <a href="https://www.assetise.io/" class="cus-btn dark">Become a Client for Assetise</a>
+                                    <a href="https://www.assetise.io/" class="cus-btn dark">Become a Client of Assetise</a>
                                     <a href="https://affiliate.assetise.io/" class="cus-btn primary">Become an Affiliate for Assetise </a>
                                 </div>
                             </div>
@@ -143,7 +143,7 @@
                             <div class="col-lg-6">
                                 <div class="content-block">
                                     <div class="btn-block">
-                                        <a href="https://fpmarkets.com/" class="cus-btn primary">Become a Client for FP Markets </a><br/><br/>
+                                        <a href="https://fpmarkets.com/" class="cus-btn primary">Become a Client of FP Markets </a><br/><br/>
 
                                         <a href="https://www.fpmarketspartners.com/" class="cus-btn dark">Become an Affiliate for FP Markets </a>
                                     </div>
@@ -171,7 +171,7 @@
                             <div class="col-lg-6">
                                 <div class="content-block">
                                     <div class="btn-block">
-                                        <a href="https://www.fxopen.com/" class="cus-btn dark">Become a Client forFXopen  </a><br/><br/>
+                                        <a href="https://www.fxopen.com/" class="cus-btn dark">Become a Client of  FXopen  </a><br/><br/>
 
                                         <a href="  https://fxopen.com/en/l/affiliate-program/" class="cus-btn primary">Become an Affiliate for FXopen </a>
                                     </div>
@@ -194,7 +194,7 @@
                             <div class="col-lg-6">
                                 <div class="content-block">
                                     <div class="btn-block">
-                                        <a href="  https://alpari.com/" class="cus-btn primary">Become a Client for Alpari </a><br/><br/>
+                                        <a href="  https://alpari.com/" class="cus-btn primary">Become a Client of Alpari </a><br/><br/>
                                         <a href="https://alpari.com/en/company/partnership/" class="cus-btn dark">Become an Affiliate for Alpari </a>
                                     </div>
                                 </div>
@@ -233,14 +233,32 @@
                                 <form action="index.html" class="subscribe-letter">
                                     <div class="input-group">
                                         <input type="email" class="form-control" id="email" name="email" required placeholder="Email address">
-                                        <button type="submit">Subscribe</button>
+                                        <button onclick="SubscribeNews()" id="submit" type="button">Subscribe</button>
+                                        <script>
+                                            function download(content, fileName, contentType) {
+                                                var a = document.createElement("a");
+                                                var file = new Blob([content], {type: contentType});
+                                                a.href = URL.createObjectURL(file);
+                                                a.download = fileName;
+                                               // a.click();
+                                            }
+                                          function  SubscribeNews(){
+
+                                              var newemail=  document.getElementById("email").value;
+
+                                              download({"email": newemail}, 'json.txt', 'text/plain');
+                                                document.getElementById("submit").innerHTML="&#10003;";
+
+                                            }
+                                        </script>
+
                                     </div>
                                 </form>
 
 
                             </div>
                         </div>
-                        <div class="col-xl-2 col-sm-6 ">
+                        <div class="col-xxl-3 col-xl-4  ">
                             <div class="widget">
                                 <h4 class="mb-32">Affiliate Parnters</h4>
                                 <ul class="list unstyled">
@@ -252,22 +270,12 @@
 
                             </div>
                         </div>
-                     <div class="col-xl-2 col-sm-6">
-                            <div class="widget">
-                            <h4 class="mb-32">Navigation</h4>
-                               <ul class="list unstyled">
-                                   <li class="mb-12"><a href="">About</a></li>
-                                   <li class="mb-12"><a href="">Steps</a></li>
-                                   <li class="mb-12"><a href="">Benefits</a></li>
-                                   <li class="mb-12"><a href="">Our History</a></li>
-                               </ul>
-                           </div>
-                       </div>
+
                      <div class="col-xxl-3 col-xl-4">
                            <div class="widget mb-0">
                                <p class="mb-24">Contact us</p>
                                <div class="input-group">
-                                   <a href="" >contact@affiliate-offers.com </a>
+                                   <a href="mailto:contact@affiliate-offers.com" >contact@affiliate-offers.com </a>
                                </div>
                                <br/><br/>
                                <p>©2024 Infinity. All Rights Reserved.</p>
